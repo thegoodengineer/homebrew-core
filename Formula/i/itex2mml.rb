@@ -7,8 +7,8 @@
 class Itex2mml < Formula
   desc "Text filter to convert itex equations to MathML"
   homepage "https://golem.ph.utexas.edu/~distler/blog/itex2MML.html"
-  url "https://golem.ph.utexas.edu/~distler/blog/files/itexToMML-1.6.1.tar.gz"
-  sha256 "3ef2572aa3421cf4d12321905c9c3f6b68911c3c9283483b7a554007010be55f"
+  url "https://golem.ph.utexas.edu/~distler/blog/files/itexToMML-1.6.2.tar.gz"
+  sha256 "8af5a7443df87f74e0cdf2bce27dd78396566cbcffaf15efe1e87325fa6b15d3"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
 
   livecheck do
