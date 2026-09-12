@@ -17,6 +17,13 @@ class Syft < Formula
 
   depends_on "go" => :build
 
+  # `test do` block downloads a test fixture resource
+  deny_network_access! [:build, :postinstall]
+
+  def fetch
+    system "go", "mod", "download"
+  end
+
   def install
     ldflags = %W[
       -X main.version=#{version}
