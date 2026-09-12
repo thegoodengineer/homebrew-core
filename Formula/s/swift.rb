@@ -378,6 +378,14 @@ class Swift < Formula
   # https://github.com/swiftlang/swift/commit/7f67eb3fc57b95c023f4c7d767a0f241e0ee541a
   patch :DATA
 
+  # Backport acceptance of `-target-arch-variant`, which the Xcode 27 driver passes for the macOS 27 SDK
+  patch do
+    url "https://github.com/swiftlang/swift/commit/421ec521c887664d96129d7c0da2b979d7930791.patch?full_index=1"
+    sha256 "3c0aca2b8d06d0d88a05d5aa3f785ec97a15b8c03a904cbe0059f4336cfc8020"
+    type :backport
+    resolves "https://github.com/swiftlang/swift/pull/87040"
+  end
+
   deny_network_access!
 
   def install
